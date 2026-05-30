@@ -53,7 +53,7 @@ You'll likely hit CORS issues again — fix it on the server side (`Access-Contr
 
 ## Things to think about
 - The lesson's container is ~150MB with `python:3.12-slim`.  How would using `python:3.12` (the full image) compare?  How about `python:3.12-alpine`?
-- Why do we need both `app.run(host="0.0.0.0", ...)` *and* `-p 5001:5000`?  What does each one do?
+- Why do we need both `flask --app server run --host=0.0.0.0` *and* `-p 5001:5000`?  What does each one do?
 - When you push an image, what actually gets uploaded — your source code, your Python interpreter, your operating system, all of the above?
 
 ## Stretch
